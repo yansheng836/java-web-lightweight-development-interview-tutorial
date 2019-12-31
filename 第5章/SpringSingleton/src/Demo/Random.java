@@ -4,6 +4,6 @@ public class Random {
 	private int i = (int) (100 * Math.random());
 
 	public void printRandom() {
-		System.out.println("杈撳嚭闅忔満鏁存暟:  " + i);
+		System.out.println("输出随机整数:  " + i);
 	}
 }

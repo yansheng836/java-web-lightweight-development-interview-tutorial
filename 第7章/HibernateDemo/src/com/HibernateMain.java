@@ -19,7 +19,7 @@ public class HibernateMain {
         SessionFactory sessionFactory = null;
         try{
             registry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-            //涓嶆寚瀹氭枃浠跺悕榛樿鏄壘hibernate.cfg.xml鏂囦欢
+            //不指定文件名默认是找hibernate.cfg.xml文件
             //registry = new StandardServiceRegistryBuilder().configure().build(); 
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         }catch(Exception ex){

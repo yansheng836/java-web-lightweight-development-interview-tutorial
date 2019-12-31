@@ -13,7 +13,7 @@ public class Main {
 
         Random r1 = (Random)ft.getBean("ran");
         Random r2 = (Random)ft.getBean("ran");
-        System.out.println("Random鐨勪袱涓疄渚嬫槸鍚︽寚鍚戝悓涓�涓紩鐢細" + (r1 == r2));
+        System.out.println("Random的两个实例是否指向同一个引用：" + (r1 == r2));
         r1.printRandom();
         r2.printRandom();        
     }

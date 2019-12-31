@@ -6,9 +6,9 @@ public class AfterAdvice implements AfterReturningAdvice
 {
      public void afterReturning(Object returnValue, Method m, Object[] args, Object target)throws Throwable
  {
-    	  System.out.println("åœ¨æ–¹æ³•è°ƒç”¨ä¹‹å");
-    	  System.out.println("æ‰§è¡Œçš„æ–¹æ³•æ˜¯:" + m);
-    	  System.out.println("æ–¹æ³•çš„å‚æ•°æ˜¯ï¼š" + args[0]);
-    	  System.out.println("ç›®æ ‡å¯¹è±¡æ˜¯ï¼š" + target);
+    	  System.out.println("ÔÚ·½·¨µ÷ÓÃÖ®ºó");
+    	  System.out.println("Ö´ĞĞµÄ·½·¨ÊÇ:" + m);
+    	  System.out.println("·½·¨µÄ²ÎÊıÊÇ£º" + args[0]);
+    	  System.out.println("Ä¿±ê¶ÔÏóÊÇ£º" + target);
     }
 }

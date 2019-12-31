@@ -28,9 +28,9 @@ public class HibernateMain {
         
         Session session = sessionFactory.openSession();
         
-        //1 鎵цSQL        
+        //1 执行SQL        
         SQLQuery query = session.createSQLQuery("select id,name,bank,balance from account where ID = ?");
-         //璁剧疆绗竴涓弬鏁扮殑鍊间负1,鍗虫煡璇D=1鐨刟ccount
+         //设置第一个参数的值为1,即查询ID=1的account
         query.setParameter(0, 1);
         List<Object[]> list = query.list();
         
@@ -40,7 +40,7 @@ public class HibernateMain {
         	System.out.println(one[0] + "\t" + one[1]  + "\t" + one[2] + "\t" + one[3]);
         }
         
-        //2 瀹炰綋鏌ヨ
+        //2 实体查询
         query = session.createSQLQuery("select id,name,bank,balance from account where id = ?").addEntity(Account.class);
         query.setParameter(0, 1);
         List<Account> accList = query.list();
@@ -50,7 +50,7 @@ public class HibernateMain {
         	System.out.println(one.getID() + "\t" + one.getName()  + "\t" + one.getBank() + "\t" + one.getBalance());
         }
         
-        //3 鎵ц鏇存柊
+        //3 执行更新
         query = session.createSQLQuery("update  Account set balance = ? where id = ?");
         query.setFloat(0, 2000f);
         query.setInteger(1, 1);

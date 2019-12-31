@@ -5,7 +5,7 @@ public class Person {
     private String ID;
     private String Name;
     private String Phone;
-    //ä½“ç°ä¸€å¯¹ä¸€çš„å…³ç³»ã€‚ä¿å­˜æ˜ å°„ç±»çš„å®ä¾‹å¯¹è±¡ã€‚
+    //ÌåÏÖÒ»¶ÔÒ»µÄ¹ØÏµ¡£±£´æÓ³ÉäÀàµÄÊµÀı¶ÔÏó¡£
     private Card card;
     
 	public String getID() {

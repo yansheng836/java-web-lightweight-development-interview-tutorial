@@ -11,7 +11,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
     
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-    	//è·å–urlåœ°å€  
+    	//»ñÈ¡urlµØÖ·  
         String reqUrl=request.getRequestURI();  
         if(reqUrl.contains("/loginAction")){
         	

@@ -25,7 +25,7 @@ public class HibernateMain {
         
         Session session = sessionFactory.openSession();
         
-        //1 å…³è”æŸ¥è¯¢        
+        //1 ¹ØÁª²éÑ¯        
         List<Object[]> list = (List<Object[]>)session.createQuery("select acc.name,acc.bank,acc.balance,u.userType from Account acc, UserInfo u where acc.ID=u.userID").list();
 
         for(int i=0;i<list.size();i++)
@@ -34,7 +34,7 @@ public class HibernateMain {
         	System.out.println(one[0] + "\t" + one[1] + "\t" + one[2] + "\t" + one[3]);
         }
         
-        //2 å­æŸ¥è¯¢
+        //2 ×Ó²éÑ¯
         List<Object[]> groupbyDemoList = (List<Object[]>)session.createQuery("select name,bank,balance from Account where ID in (select userID from UserInfo)").list();
         
         for(int i=0;i<groupbyDemoList.size();i++)

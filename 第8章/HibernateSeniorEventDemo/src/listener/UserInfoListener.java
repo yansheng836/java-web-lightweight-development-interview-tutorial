@@ -40,11 +40,11 @@ public class UserInfoListener implements SaveOrUpdateEventListener, PostUpdateEv
 	     }
 		
 		for (int i = 0; i < event.getState().length; i++) {  
-		// æ›´æ–°å‰çš„å€¼  
+		// ¸üÐÂÇ°µÄÖµ  
 		Object oldValue = event.getOldState()[i];  
-		// æ›´æ–°åŽçš„æ–°å€¼  
+		// ¸üÐÂºóµÄÐÂÖµ  
 		Object newValue = event.getState()[i];  
-		//æ›´æ–°çš„å±žæ€§å  
+		//¸üÐÂµÄÊôÐÔÃû  
 		String propertyName = event.getPersister().getPropertyNames()[i]; 
 		System.out.println("property" + propertyName + "change from " +oldValue + " to " +  newValue);
 		}  
@@ -61,10 +61,10 @@ public class UserInfoListener implements SaveOrUpdateEventListener, PostUpdateEv
 		System.out.println("after delete");
 		System.out.println(event.getEntity().getClass().getName());  
 		for (int i = 0; i < event.getDeletedState().length; i++) {  
-		// æ›´æ–°å‰çš„å€¼  
+		// ¸üÐÂÇ°µÄÖµ  
 		Object deletedValue = event.getDeletedState()[i]; 
 		  
-		//æ›´æ–°çš„å±žæ€§å  
+		//¸üÐÂµÄÊôÐÔÃû  
 		String propertyName = event.getPersister().getPropertyNames()[i]; 
 		System.out.println("property" + propertyName + " value " + deletedValue);
 		}  

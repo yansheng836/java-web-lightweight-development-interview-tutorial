@@ -25,7 +25,7 @@ public class HibernateMain {
         
         Session session = sessionFactory.openSession();
         
-        //1 ä»¥Objectæ•°ç»„çš„å½¢å¼è¿”å›å­—æ®µ        
+        //1 ÒÔObjectÊı×éµÄĞÎÊ½·µ»Ø×Ö¶Î        
         List<Object[]> accountList = (List<Object[]>)session.createQuery("select name,bank,balance from Account where balance < :highBalance and balance > :lowBalance").setParameter("highBalance",800.0f).setParameter("lowBalance", 50.0f).list();
 
         for(int i=0;i<accountList.size();i++)
@@ -34,7 +34,7 @@ public class HibernateMain {
         	System.out.println(one[0] + "\t" + one[1]  + "\t" + one[2]);
         }
         
-        //2 å¸¦group byçš„å½¢å¼
+        //2 ´øgroup byµÄĞÎÊ½
         List<Object[]> groupbyDemoList = (List<Object[]>)session.createQuery("select name,bank,count(*) from Account group by name,bank having count(*)>1").list();
         
         for(int i=0;i<groupbyDemoList.size();i++)
