@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Model">
+	<class name="UserInfo" table="UserInfo">
+		<id name="userID" type="int">
+			<column name="UserID" />			
+		</id>
+		<property name="userName" type="java.lang.String">
+			<column name="username" length="20" not-null="true" unique="true" />
+		</property>
+		<property name="pwd" type="java.lang.String">
+			<column name="pwd" length="20"></column>
+		</property>
+		<property name="userType" type="java.lang.String">
+			<column name="usertype" length="20"></column>
+		</property>
+	</class>	
+</hibernate-mapping>

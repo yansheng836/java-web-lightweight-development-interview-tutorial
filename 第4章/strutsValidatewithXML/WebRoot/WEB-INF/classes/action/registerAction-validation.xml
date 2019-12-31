@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE validators PUBLIC
+ "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+ "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>  
+   <field name="username">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入用户名。</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入密码。</message>
+		</field-validator>
+	</field>
+	<field name="confirm">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入确认密码。</message>
+		</field-validator>
+	</field>
+	<field name="confirm">
+         <field-validator type="fieldexpression">
+             <param name="expression"> (confirm eq password)</param>
+             <message>密码必须和确认密码一致</message>
+         </field-validator>
+    </field>
+    <field name="email">
+        <field-validator type="email">
+              <message>电子邮件地址必须有效。</message>
+        </field-validator>
+    </field>
+	<field name="handphone">
+		<field-validator type="requiredstring">
+			<message>手机号不能是空。</message>
+		</field-validator>
+	   	<field-validator type="regex">
+	   		<param name="regexExpression"><![CDATA[^1[358]\d{9}$]]></param>
+	   		<message>请填写正确的手机号。</message>
+	   	</field-validator>
+	</field>
+</validators>

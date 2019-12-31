@@ -1,0 +1,12 @@
+<Context path="/mybbs">
+  <Resource auth="Container" 
+  	driverClassName="com.mysql.jdbc.Driver" 
+  	maxActive="100" 
+  	maxIdle="30" 
+  	maxWait="10000" 
+  	name="jdbc/bbsdb" 
+  	password="123456" 
+  	type="javax.sql.DataSource" 
+  	url="jdbc:mysql://localhost:3306/bbsdb" 
+  	username="root"/>
+</Context>

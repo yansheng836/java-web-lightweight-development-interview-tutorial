@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Model">
+	<class name="Person" table="Person">
+		<id name="ID" type="java.lang.String">	
+		  					
+		</id>
+		<property name="Name" type="java.lang.String">
+			<column name="Name" length="20" not-null="true" />
+		</property>
+		<property name="Phone" type="java.lang.String">
+			<column name="Phone" length="20"></column>
+		</property>		
+		
+	  <map name="cardMap" table="Card" inverse="true" cascade="all">  
+            <key column="PersonID"></key>  
+            <!-- 对应于Map<key,value>中的key -->
+            <index column="cardID" type="string"></index>  
+            <!-- 对应于Map<key,value>中的value -->
+            <one-to-many class="Model.Card"/> 
+      </map>  
+		
+	</class>	
+</hibernate-mapping>

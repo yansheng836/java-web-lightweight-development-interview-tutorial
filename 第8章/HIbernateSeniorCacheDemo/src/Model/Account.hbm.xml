@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Model">
+	<class name="Account" table="Account">
+	<!-- EHCache二级缓存的策略：
+      只读缓存          （read-only）
+      读/写缓存          （read-write）
+      不严格的读/写缓存       (nonstrict-read-write)
+      事务缓存           (transactional)         EHCache不支持事务缓存  
+   -->
+  <!-- 应用EHCache二级缓存的策略 -->
+  <cache usage="read-only"/>
+	
+		<id name="ID" column="ID" type="int">
+             <generator class="increment" />
+        </id> 
+		
+		<property name="name" type="java.lang.String">
+			<column name="Name" length="20" not-null="true"/>
+		</property>
+		<property name="bank" type="java.lang.String">
+			<column name="Bank" length="20"></column>
+		</property>
+		<property name="balance" type="float">
+			<column name="Balance"></column>
+		</property>
+	</class>	
+</hibernate-mapping>

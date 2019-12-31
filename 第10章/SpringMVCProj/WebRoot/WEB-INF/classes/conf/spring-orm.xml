@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">  
+        
+    <!-- 配置数据源 -->  
+    <bean id="dataSource"  
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>  
+        <property name="url" value="jdbc:mysql://localhost:3306/projectchart"></property>  
+        <property name="username" value="root"></property>  
+        <property name="password" value="123456"></property>  
+    </bean>  
+      
+    <!-- 配置SessionFactory -->  
+    <bean id="sessionFactory"  
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">  
+        <property name="dataSource" ref="dataSource" />  
+        <property name="hibernateProperties">  
+            <props>  
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
+                <prop key="hibernate.hbm2ddl.auto">update</prop>  
+                <prop key="hibernate.show_sql">true</prop>  
+                <prop key="hibernate.format_sql">true</prop>  
+            </props>  
+        </property>  
+        
+        <!-- 注解扫描的包 -->  
+        <property name="annotatedClasses">  
+            <list>  
+                <value>com.model.User</value>  
+            </list>  
+        </property>  
+    </bean>  
+      
+      
+    
+<!-- 声明式容器事务管理 ,transaction-manager指定事务管理器为transactionManager -->
+<tx:advice id="txAdvice" transaction-manager="transactionManager">
+<tx:attributes>
+<tx:method name="add*" propagation="REQUIRED" />
+<tx:method name="del*" propagation="REQUIRED" />
+<tx:method name="get*" propagation="REQUIRED" />
+<tx:method name="modify*" propagation="REQUIRED" />
+</tx:attributes>
+</tx:advice>
+<aop:config>
+<!-- 只对业务逻辑层实施事务 -->
+<aop:pointcut id="txPointcut" expression="execution(* com.service..*.*(..))" />
+<!-- Advisor定义，切入点和通知分别为txPointcut、txAdvice -->
+<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice"/>
+</aop:config>
+      
+      
+      
+      
+      
+      
+    <!-- 配置一个事务管理器 -->  
+    <bean id="transactionManager"  
+        class="org.springframework.orm.hibernate4.HibernateTransactionManager">  
+        <property name="sessionFactory" ref="sessionFactory" />  
+    </bean>  
+  
+  	<bean id="userService" class="com.service.UserService">
+		<property name="userDao" ref="userDao"/>
+	</bean>
+	
+	<bean id="userDao" class="com.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+  
+</beans>  

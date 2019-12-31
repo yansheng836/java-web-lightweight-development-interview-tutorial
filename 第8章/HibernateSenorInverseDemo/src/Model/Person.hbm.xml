@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Model">
+	<class name="Person" table="Person">
+		<id name="ID" type="java.lang.String">	
+		  					
+		</id>
+		<property name="Name" type="java.lang.String">
+			<column name="Name" length="20" not-null="true" />
+		</property>
+		<property name="Phone" type="java.lang.String">
+			<column name="Phone" length="20"></column>
+		</property>		
+		
+		<set name="cards" cascade="save-update" inverse="false">  
+             <key column="PersonID"/>  
+             <one-to-many class="Card"/>  
+        </set>  
+		
+	</class>	
+</hibernate-mapping>

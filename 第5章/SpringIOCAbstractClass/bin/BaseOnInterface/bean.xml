@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="ran" class="BaseOnInterface.Random" />
+   
+    <bean id="hello" class="BaseOnInterface.HelloAbstract">
+        <lookup-method name="createRandom" bean="ran"/>      
+    </bean>   
+</beans> 

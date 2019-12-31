@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+ <!--  配置目标对象-->
+ <bean id="accountTarget" class="AccountImpl">
+  <!--  为目标对象注入name属性值-->
+  <property name="name">
+   <value>Java</value>
+  </property>  
+ </bean>
+ <!--  第一个拦截器-->
+ <bean id="myAdvice" class="BeforeAdvice"/>
+ <!--  第二个拦截器-->
+ <bean id="myAroundInterceptor" class="AroundInterceptor"/>
+<!--  将拦截器包装成Advisor，该对象还确定代理对怎样的方法增加处理-->
+ <bean id="addAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+  <!--  advice属性确定处理bean-->
+  <property name="advice">
+   <!-- 此处的处理bean定义采用嵌套bean,也可引用容器的另一个bean-->
+   <bean class="AfterAdvice"/>
+  </property>
+  <!-- 确定正则表达式模式-->
+  <property name="patterns">
+   <list>
+    <!--  确定正则表达式列表-->
+    <value>.*add*.</value>
+   </list>
+  </property>
+ </bean>
+ <!--  使用ProxyFactoryBean 产生代理对象-->
+ <bean id="account" class="org.springframework.aop.framework.ProxyFactoryBean">
+  <!--  代理对象所实现的接口-->
+  <property name="proxyInterfaces">
+   <value>Account</value>
+  </property>
+  <!--  设置目标对象-->
+  <property name="target">
+   <ref local="accountTarget"/>  
+  </property>
+  <!--  代理对象所使用的拦截器-->
+  <property name="interceptorNames">
+   <list>
+    <value>addAdvisor</value>
+    <value>myAdvice</value>
+    <value>myAroundInterceptor</value>
+   </list>
+  </property>
+ </bean>
+</beans>

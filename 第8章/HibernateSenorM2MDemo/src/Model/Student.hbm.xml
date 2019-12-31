@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Model">
+	<class name="Student" table="Student">
+		<id name="studentID" column="StudentID" type="java.lang.String">		  					
+		</id>
+		<property name="studentName" type="java.lang.String">
+			<column name="Name" length="20" not-null="true" />
+		</property>
+		
+	   <set name="courses" table="students_courses" cascade="save-update">   
+            <key column="student_id"></key>  
+            <many-to-many class="Model.Course" column="course_id"></many-to-many>  
+        </set>        
+		
+	</class>	
+</hibernate-mapping>
