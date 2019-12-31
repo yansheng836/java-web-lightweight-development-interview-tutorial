@@ -19,6 +19,24 @@
 
 实用性案例+视频讲解+面试点解析，帮助你在短时间里把理论知识转换成实践技能。
 
-## 注
+## 下载
+
+### 1.源码
+
+```bash
+git clone https://github.com/yansheng836/java-web-lightweight-development-interview-tutorial
+```
+
+或者：[博文视点32145代码](http://www.broadview.com.cn/file/resource/115232122229113074145088147214182210219177032104)
+
+### 2.PDF
+
+[JavaWeb轻量级开发面试教程.pdf](https://github.com/yansheng836/java-web-lightweight-development-interview-tutorial/blob/master/JavaWeb%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E6%95%99%E7%A8%8B.pdf)
+
+### 3.视频
+
+[博文视点32145视频](http://www.broadview.com.cn/file/resource/205159238194148138162059022022237126181076113197)
+
+## 说明
 
 原博文视点下载的压缩包含有大量的jar，很占空间，因此统一将其整理到[`lib`](./lib/)目录下。
