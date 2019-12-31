@@ -39,4 +39,24 @@ git clone https://github.com/yansheng836/java-web-lightweight-development-interv
 
 ## 说明
 
-原博文视点下载的压缩包含有大量的jar，很占空间，因此统一将其整理到[`lib`](./lib/)目录下。
+### 1.jar
+
+原博文视点下载的代码没有使用项目构建工具进行管理（如Maven等），含有大量的jar，很占空间，因此统一将其整理到[`lib`](./lib/)目录下。
+
+### 2.编码
+
+原代码文件编码不一，有gbk、utf8等，即master分支代码。于是进行了转换，转换后：
+
+utf8-->[utf分支](https://github.com/yansheng836/java-web-lightweight-development-interview-tutorial/tree/utf8)
+
+gbk-->[gbk分支](https://github.com/yansheng836/java-web-lightweight-development-interview-tutorial/tree/gbk)
+
+#### 克隆
+
+```bash
+# utf8分支
+git clone -b utf8 https://github.com/yansheng836/java-web-lightweight-development-interview-tutorial.git
+
+# gbk分支
+git clone -b gbk https://github.com/yansheng836/java-web-lightweight-development-interview-tutorial.git
+```
