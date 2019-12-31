@@ -12,7 +12,7 @@
     <context:component-scan base-package="com.mvc" />  
     <mvc:annotation-driven />  
   
-    <!-- é…ç½®è§£æžå™¨ -->  
+    <!-- ÅäÖÃ½âÎöÆ÷ -->  
     <bean id="viewResolver"  
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
         <property name="prefix" value="/" />  

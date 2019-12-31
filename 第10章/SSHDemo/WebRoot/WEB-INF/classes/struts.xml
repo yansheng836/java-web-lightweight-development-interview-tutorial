@@ -4,7 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 
-	<constant name="struts.action.extension" value="do"/><!-- 瀹氫箟璁块棶鏃剁殑鍚庣紑 -->
+	<constant name="struts.action.extension" value="do"/><!-- 定义访问时的后缀 -->
 	<package name="train" namespace="/demo" extends="struts-default">
 		<action name="login" class="helloworld" method="login">
 			<result name="success">/index.jsp</result>

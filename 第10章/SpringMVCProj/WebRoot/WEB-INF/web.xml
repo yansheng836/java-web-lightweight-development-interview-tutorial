@@ -4,18 +4,18 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   
     http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">  
   
-    <!-- springé…ç½® -->  
+    <!-- springÅäÖÃ -->  
     <context-param>  
         <param-name>contextConfigLocation</param-name>  
         <param-value>/WEB-INF/classes/conf/spring*.xml</param-value>  
     </context-param>  
   
-    <!--   é…ç½®springå¯åŠ¨listenerå…¥å£ -->  
+    <!--   ÅäÖÃspringÆô¶¯listenerÈë¿Ú -->  
     <listener>  
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
     </listener>   
       
-    <!-- é…ç½®springMVCå¯åŠ¨DispatcherServleteå…¥å£ -->  
+    <!-- ÅäÖÃspringMVCÆô¶¯DispatcherServleteÈë¿Ú -->  
     <servlet>  
         <servlet-name>springMVC</servlet-name>  
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  

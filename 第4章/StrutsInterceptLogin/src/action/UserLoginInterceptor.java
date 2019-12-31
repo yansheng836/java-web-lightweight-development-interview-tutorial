@@ -11,13 +11,13 @@ public class UserLoginInterceptor extends AbstractInterceptor {
 	private static final long serialVersionUID = 1L;
 
 	public String intercept(ActionInvocation arg0) throws Exception {
-    	// åˆ¤æ–­æ˜¯å¦è¯·æ±‚ä¸ºç™»å½•ç•Œé¢(login),å¦‚æœæ˜¯åˆ™ä¸æ‹¦æˆª
+    	// ÅĞ¶ÏÊÇ·ñÇëÇóÎªµÇÂ¼½çÃæ(login),Èç¹ûÊÇÔò²»À¹½Ø
         if (LoginAction.class == arg0.getAction().getClass())
         {
              return arg0.invoke();
         }
         
-       // å¦‚æœæ˜¯è¯·æ±‚å…¶ä»–é¡µé¢ï¼Œè¿›è¡Œæ‹¦æˆª
+       // Èç¹ûÊÇÇëÇóÆäËûÒ³Ãæ£¬½øĞĞÀ¹½Ø
          Map sessionMap = arg0.getInvocationContext().getSession();
          if (null == sessionMap.get("username"))
          {

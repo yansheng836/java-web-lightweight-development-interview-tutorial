@@ -27,7 +27,7 @@ public class HibernateMain {
         }
         
         Session session = sessionFactory.openSession();
-        //æ¼”ç¤ºupdateå’Œmergeä»¥åŠsaveOrUpdateçš„å·®åˆ«
+        //ÑİÊ¾updateºÍmergeÒÔ¼°saveOrUpdateµÄ²î±ğ
         Transaction tx = session.beginTransaction();
         Account peterAcc = new Account();
         peterAcc.setName("Peter");
@@ -37,17 +37,17 @@ public class HibernateMain {
         session.merge(peterAcc);  //ok
         session.saveOrUpdate(peterAcc);  //ok
         tx.commit();
-        //æ¼”ç¤ºsaveå’Œpersistçš„å·®åˆ«
+        //ÑİÊ¾saveºÍpersistµÄ²î±ğ
         tx = session.beginTransaction();
         Account mikeAcc = new Account();
         mikeAcc.setName("Mike");
         mikeAcc.setBank("MikeBank");
         mikeAcc.setBalance(300.0f);
         System.out.println("the new inserted id is:" + session.save(mikeAcc));
-        //persistæ–¹æ³•æ²¡æœ‰è¿”å›ç±»å‹
+        //persist·½·¨Ã»ÓĞ·µ»ØÀàĞÍ
         session.persist(mikeAcc);
         tx.commit();        
-        //æ¼”ç¤ºflushçš„ç”¨æ³•
+        //ÑİÊ¾flushµÄÓÃ·¨
         Account flushAcc = new Account();
         flushAcc.setName("Flush");
         flushAcc.setBank("FlushBank");
@@ -56,7 +56,7 @@ public class HibernateMain {
         session.flush();
         flushAcc.setBalance(2000);
         
-        //æ¼”ç¤ºevictå’Œclear
+        //ÑİÊ¾evictºÍclear
 //        Account evictAcc = new Account();
 //        evictAcc.setName("Evict");
 //        evictAcc.setBank("EvictBank");
@@ -65,7 +65,7 @@ public class HibernateMain {
 //        //session.evict(evictAcc);// error
 //        session.clear();
 //        session.flush();
-        //å…³é—­å¿…è¦çš„å¯¹è±¡
+        //¹Ø±Õ±ØÒªµÄ¶ÔÏó
         session.close();
 		sessionFactory.close(); 
    

@@ -6,39 +6,39 @@
    <field name="username">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message>å¿…é¡»è¾“å…¥ç”¨æˆ·åã€‚</message>
+			<message>±ØÐëÊäÈëÓÃ»§Ãû¡£</message>
 		</field-validator>
 	</field>
 	<field name="password">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message>å¿…é¡»è¾“å…¥å¯†ç ã€‚</message>
+			<message>±ØÐëÊäÈëÃÜÂë¡£</message>
 		</field-validator>
 	</field>
 	<field name="confirm">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message>å¿…é¡»è¾“å…¥ç¡®è®¤å¯†ç ã€‚</message>
+			<message>±ØÐëÊäÈëÈ·ÈÏÃÜÂë¡£</message>
 		</field-validator>
 	</field>
 	<field name="confirm">
          <field-validator type="fieldexpression">
              <param name="expression"> (confirm eq password)</param>
-             <message>å¯†ç å¿…é¡»å’Œç¡®è®¤å¯†ç ä¸€è‡´</message>
+             <message>ÃÜÂë±ØÐëºÍÈ·ÈÏÃÜÂëÒ»ÖÂ</message>
          </field-validator>
     </field>
     <field name="email">
         <field-validator type="email">
-              <message>ç”µå­é‚®ä»¶åœ°å€å¿…é¡»æœ‰æ•ˆã€‚</message>
+              <message>µç×ÓÓÊ¼þµØÖ·±ØÐëÓÐÐ§¡£</message>
         </field-validator>
     </field>
 	<field name="handphone">
 		<field-validator type="requiredstring">
-			<message>æ‰‹æœºå·ä¸èƒ½æ˜¯ç©ºã€‚</message>
+			<message>ÊÖ»úºÅ²»ÄÜÊÇ¿Õ¡£</message>
 		</field-validator>
 	   	<field-validator type="regex">
 	   		<param name="regexExpression"><![CDATA[^1[358]\d{9}$]]></param>
-	   		<message>è¯·å¡«å†™æ­£ç¡®çš„æ‰‹æœºå·ã€‚</message>
+	   		<message>ÇëÌîÐ´ÕýÈ·µÄÊÖ»úºÅ¡£</message>
 	   	</field-validator>
 	</field>
 </validators>

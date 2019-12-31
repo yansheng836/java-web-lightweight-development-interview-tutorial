@@ -35,7 +35,7 @@ public class UserInfoInterceptor extends EmptyInterceptor {
         {
             for (int index=0;index<propertyNames.length;index++)
             {
-                /*æ‰¾åˆ°åä¸º"userName"çš„å±žæ€§*/
+                /*ÕÒµ½ÃûÎª"userName"µÄÊôÐÔ*/
                 if ("userType".equals(propertyNames[index]))
                 {
                     if(state[index].toString().equals("Vip"))

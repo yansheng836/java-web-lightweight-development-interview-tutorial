@@ -9,7 +9,7 @@
                  class="action.UserLoginInterceptor">
              </interceptor>
                           
-             <!-- è‡ªå®šä¹‰æ‹¦æˆªå™¨æ ˆ -->
+             <!-- ×Ô¶¨ÒåÀ¹½ØÆ÷Õ» -->
              <interceptor-stack name="myDefaultStack">
                 <interceptor-ref name="loginCheck"/>
                 <interceptor-ref name="defaultStack"/>

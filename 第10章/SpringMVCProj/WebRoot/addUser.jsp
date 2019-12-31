@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 <html>  
   <head>  
-    <title>æ·»åŠ ç”¨æˆ·</title>
+    <title>Ìí¼ÓÓÃ»§</title>
   </head> 
   <%
 String path = request.getContextPath();
@@ -11,9 +11,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %> 
   <body>  
     <form action="<%=basePath%>/addUser" method="post">  
-        ç”¨æˆ·åï¼š<input type="text" name="name"><br/>  
-        å¹´&nbspé¾„ï¼š      <input type="text" name="age"><br/>  
-           <input type="submit" value="æ·»åŠ ç”¨æˆ·">  
+        ÓÃ»§Ãû£º<input type="text" name="name"><br/>  
+        Äê&nbspÁä£º      <input type="text" name="age"><br/>  
+           <input type="submit" value="Ìí¼ÓÓÃ»§">  
     </form>  
   </body>  
 </html>  

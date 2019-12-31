@@ -4,15 +4,15 @@
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
   <html>
     <head>
-         <title>ÁôªÂΩïÁïåÈù¢</title>         
+         <title>µ«¬ºΩÁ√Ê</title>         
    </head>
    <body>
-                                    Áî®Êà∑ÁôªÂΩï
+                                    ”√ªßµ«¬º
              <br>
              <s:form action="/login" method="post">
-                 <s:textfield name="username" label="Áî®Êà∑Âêç"/>
-                 <s:textfield name="password" label="ÂØÜÁ†Å"/>
-                 <s:submit value="ÁôªÂΩï"/>
+                 <s:textfield name="username" label="”√ªß√˚"/>
+                 <s:textfield name="password" label="√‹¬Î"/>
+                 <s:submit value="µ«¬º"/>
              </s:form>
      </body>
  </html>

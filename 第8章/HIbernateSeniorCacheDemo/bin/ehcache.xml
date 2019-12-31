@@ -2,17 +2,17 @@
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">  
     <!--  
-        name:cacheå”¯ä¸€æ ‡è¯†   
-        eternalï¼šç¼“å­˜æ˜¯å¦æ°¸ä¹…æœ‰æ•ˆ   
-        maxElementsInMemoryï¼šå†…å­˜ä¸­æœ€å¤§ç¼“å­˜å¯¹è±¡æ•°  
-        overflowToDisk(true,false)ï¼šç¼“å­˜å¯¹è±¡è¾¾åˆ°æœ€å¤§æ•°åŽï¼Œå°†ç¼“å­˜å†™åˆ°ç¡¬ç›˜ä¸­  
-        diskPersistentï¼šç¡¬ç›˜æŒä¹…åŒ–  
-        timeToIdleSecondsï¼šç¼“å­˜æ¸…é™¤æ—¶é—´   
-        timeToLiveSecondsï¼šç¼“å­˜å­˜æ´»æ—¶é—´  
-        memoryStoreEvictionPolicyï¼šç¼“å­˜æ¸…ç©ºç­–ç•¥  
-        1.FIFOï¼šfirst in first out å…ˆè®²å…ˆå‡º  
-        2.LFUï¼š Less Frequently Used ä¸€ç›´ä»¥æ¥æœ€å°‘è¢«ä½¿ç”¨çš„  
-        3.LRUï¼šLeast Recently Used  æœ€è¿‘æœ€å°‘ä½¿ç”¨çš„  
+        name:cacheÎ¨Ò»±êÊ¶   
+        eternal£º»º´æÊÇ·ñÓÀ¾ÃÓÐÐ§   
+        maxElementsInMemory£ºÄÚ´æÖÐ×î´ó»º´æ¶ÔÏóÊý  
+        overflowToDisk(true,false)£º»º´æ¶ÔÏó´ïµ½×î´óÊýºó£¬½«»º´æÐ´µ½Ó²ÅÌÖÐ  
+        diskPersistent£ºÓ²ÅÌ³Ö¾Ã»¯  
+        timeToIdleSeconds£º»º´æÇå³ýÊ±¼ä   
+        timeToLiveSeconds£º»º´æ´æ»îÊ±¼ä  
+        memoryStoreEvictionPolicy£º»º´æÇå¿Õ²ßÂÔ  
+        1.FIFO£ºfirst in first out ÏÈ½²ÏÈ³ö  
+        2.LFU£º Less Frequently Used Ò»Ö±ÒÔÀ´×îÉÙ±»Ê¹ÓÃµÄ  
+        3.LRU£ºLeast Recently Used  ×î½ü×îÉÙÊ¹ÓÃµÄ  
     -->  
     <defaultCache   maxElementsInMemory="100000" eternal="false"  
         timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true" />  

@@ -19,7 +19,7 @@
 						"jdbc:mysql://localhost:3306/class3", "root", "123456");
 				if (connection != null) {
 					
-					//è®¾ç½®éè‡ªåŠ¨æäº¤ï¼Œå¼€å§‹ç”¨äº‹åŠ¡çš„æ–¹å¼æäº¤
+					//ÉèÖÃ·Ç×Ô¶¯Ìá½»£¬¿ªÊ¼ÓÃÊÂÎñµÄ·½Ê½Ìá½»
 					//connection.setAutoCommit(false);
 
 					
@@ -31,10 +31,10 @@
 					pstmt.setString(1,"2");
 					pstmt.setString(2,"Mike");
 					pstmt.addBatch();
-					//æ‰§è¡Œæ‰¹å¤„ç†
+					//Ö´ĞĞÅú´¦Àí
 					pstmt.executeBatch();	
 					
-					//æäº¤äº‹åŠ¡
+					//Ìá½»ÊÂÎñ
 					//connection.commit();
 
 					
@@ -45,7 +45,7 @@
 				System.out.println("Some of Students were not inserted correctly, please check the student table and insert manually.");
 				e.printStackTrace();
 			} finally {
-				//åœ¨catché‡Œï¼Œä¸€æ—¦å‡ºç°å¼‚å¸¸ï¼Œéœ€è¦å›æ»šäº‹åŠ¡  
+				//ÔÚcatchÀï£¬Ò»µ©³öÏÖÒì³££¬ĞèÒª»Ø¹öÊÂÎñ  
 //				try {
 //					connection.rollback();
 //				} catch (SQLException e1) {

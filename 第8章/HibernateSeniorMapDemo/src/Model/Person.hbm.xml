@@ -16,9 +16,9 @@
 		
 	  <map name="cardMap" table="Card" inverse="true" cascade="all">  
             <key column="PersonID"></key>  
-            <!-- 瀵瑰簲浜嶮ap<key,value>涓殑key -->
+            <!-- 对应于Map<key,value>中的key -->
             <index column="cardID" type="string"></index>  
-            <!-- 瀵瑰簲浜嶮ap<key,value>涓殑value -->
+            <!-- 对应于Map<key,value>中的value -->
             <one-to-many class="Model.Card"/> 
       </map>  
 		

@@ -15,27 +15,27 @@ import javax.servlet.http.HttpServletResponse;
 		}
 		
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// setContentType()æ–¹æ³•ç”¨ä¸è®¾å®šå­—ç¬¦ç¼–ç ï¼Œå¦‚æœè¦æ˜¾ç¤ºä¸­æ–‡ï¼Œå¯ä»¥å°†charsetè®¾å®šä¸º
+		// setContentType()·½·¨ÓÃÓëÉè¶¨×Ö·û±àÂë£¬Èç¹ûÒªÏÔÊ¾ÖĞÎÄ£¬¿ÉÒÔ½«charsetÉè¶¨Îª
 			// GB18030
 			response.setContentType("text/html;charset= GB18030");
 			PrintWriter out = response.getWriter();
-			//ä½¿ç”¨request. getParameter()æ–¹æ³•è·å–è¡¨å•ä¸­çš„å€¼
+			//Ê¹ÓÃrequest. getParameter()·½·¨»ñÈ¡±íµ¥ÖĞµÄÖµ
 			String username = request.getParameter("username");
 			String password = request.getParameter("password");
 			out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 			out.println("<HTML>");
-			out.println("  <HEAD><TITLE>éªŒè¯é¡µé¢</TITLE></HEAD>");
+			out.println("  <HEAD><TITLE>ÑéÖ¤Ò³Ãæ</TITLE></HEAD>");
 			out.println("  <BODY>");
-			//åˆ¤æ–­ç”¨æˆ·æ˜¯å¦å¡«å†™ç”¨æˆ·åå’Œå¯†ç 
+			//ÅĞ¶ÏÓÃ»§ÊÇ·ñÌîĞ´ÓÃ»§ÃûºÍÃÜÂë
 			if(username.length()<1||password.length()<1)
 			{
-				out.println("è¯·è¾“å…¥æ‚¨çš„ç”¨æˆ·åå’Œå¯†ç ï¼Œ<a href='../login.jsp'>ç‚¹å‡»æ­¤å¤„è¿”å›</a>");
-			//åˆ¤æ–­ç”¨æˆ·æ˜æ˜¯å¦æ˜¯hackerï¼Œå¦‚æœæ˜¯ï¼Œåˆ™æ˜¾ç¤ºç¦æ­¢è®¿é—®é¡µé¢çš„ä¿¡æ¯
+				out.println("ÇëÊäÈëÄúµÄÓÃ»§ÃûºÍÃÜÂë£¬<a href='../login.jsp'>µã»÷´Ë´¦·µ»Ø</a>");
+			//ÅĞ¶ÏÓÃ»§Ã÷ÊÇ·ñÊÇhacker£¬Èç¹ûÊÇ£¬ÔòÏÔÊ¾½ûÖ¹·ÃÎÊÒ³ÃæµÄĞÅÏ¢
 			}
 			else if(username.equalsIgnoreCase("hacker"))
 			{
-				out.println("å¾ˆæŠ±æ­‰ï¼Œæ‚¨ç¦æ­¢ç™»å½•æ­¤é¡µé¢<a href='../login.jsp'>ç‚¹å‡»æ­¤å¤„è¿”å›</a>");
-			//é€šè¿‡éªŒè¯ï¼Œåˆ™è¡¨ç¤ºæ­£å¸¸ç™»å½•ï¼Œé¡µé¢è·³è½¬è‡³welcome.jspé¡µé¢
+				out.println("ºÜ±§Ç¸£¬Äú½ûÖ¹µÇÂ¼´ËÒ³Ãæ<a href='../login.jsp'>µã»÷´Ë´¦·µ»Ø</a>");
+			//Í¨¹ıÑéÖ¤£¬Ôò±íÊ¾Õı³£µÇÂ¼£¬Ò³ÃæÌø×ªÖÁwelcome.jspÒ³Ãæ
 			}
 			else
 			{		

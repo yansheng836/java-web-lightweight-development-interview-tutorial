@@ -4,13 +4,13 @@
 	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="Model">
 	<class name="Account" table="Account">
-	<!-- EHCacheäºŒçº§ç¼“å­˜çš„ç­–ç•¥ï¼š
-      åªè¯»ç¼“å­˜          ï¼ˆread-onlyï¼‰
-      è¯»/å†™ç¼“å­˜          ï¼ˆread-writeï¼‰
-      ä¸ä¸¥æ ¼çš„è¯»/å†™ç¼“å­˜       (nonstrict-read-write)
-      äº‹åŠ¡ç¼“å­˜           (transactional)         EHCacheä¸æ”¯æŒäº‹åŠ¡ç¼“å­˜  
+	<!-- EHCache¶þ¼¶»º´æµÄ²ßÂÔ£º
+      Ö»¶Á»º´æ          £¨read-only£©
+      ¶Á/Ð´»º´æ          £¨read-write£©
+      ²»ÑÏ¸ñµÄ¶Á/Ð´»º´æ       (nonstrict-read-write)
+      ÊÂÎñ»º´æ           (transactional)         EHCache²»Ö§³ÖÊÂÎñ»º´æ  
    -->
-  <!-- åº”ç”¨EHCacheäºŒçº§ç¼“å­˜çš„ç­–ç•¥ -->
+  <!-- Ó¦ÓÃEHCache¶þ¼¶»º´æµÄ²ßÂÔ -->
   <cache usage="read-only"/>
 	
 		<id name="ID" column="ID" type="int">

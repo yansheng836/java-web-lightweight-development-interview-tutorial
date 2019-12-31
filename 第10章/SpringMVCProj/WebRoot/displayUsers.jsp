@@ -5,24 +5,24 @@
 
 <html>  
   <head>  
-    <title>鐢ㄦ埛鍒楄〃</title>      
+    <title>用户列表</title>      
   </head>  
   <body>  
-        <a href=/SpringMVCProj/addUser.jsp>娣诲姞鐢ㄦ埛</a>
+        <a href=/SpringMVCProj/addUser.jsp>添加用户</a>
         <table border="1">  
             <tbody>  
                 <tr>  
-                    <th>鍚嶅瓧</th>  
-                    <th>骞撮緞</th>  
-                    <th>鎿嶄綔</th>  
+                    <th>名字</th>  
+                    <th>年龄</th>  
+                    <th>操作</th>  
                 </tr>  
                     <c:forEach items="${users}" var="u">  
                         <tr>  
                             <td>${u.name }</td>  
                             <td>${u.age }</td>  
                             <td>  
-                                <a href="/SpringMVCProj/getUser/${u.id}">鏇存柊</a>  
-                                <a href="/SpringMVCProj/deleteUser/${u.id}">鍒犻櫎</a>  
+                                <a href="/SpringMVCProj/getUser/${u.id}">更新</a>  
+                                <a href="/SpringMVCProj/deleteUser/${u.id}">删除</a>  
                             </td>  
                         </tr>  
                     </c:forEach>  

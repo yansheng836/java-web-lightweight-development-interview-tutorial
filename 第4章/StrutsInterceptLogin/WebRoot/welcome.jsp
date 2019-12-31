@@ -5,11 +5,11 @@
  <html>
      <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <title>登陆成功</title>
+         <title>��½�ɹ�</title>
       </head>
      <body>
          <center>
-             <s:property value="username"/>,欢迎光临
+             <s:property value="username"/>,��ӭ����
          </center>        
      </body>
  </html>

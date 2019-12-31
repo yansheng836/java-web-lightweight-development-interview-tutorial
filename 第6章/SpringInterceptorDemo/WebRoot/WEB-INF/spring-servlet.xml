@@ -27,7 +27,7 @@
          </bean>
          
     <context:component-scan base-package="Inteceptor"/>  
-    <!--è®¾ç½®ç™»å½•æ‹¦æˆªå™¨ -->  
+    <!--ÉèÖÃµÇÂ¼À¹½ØÆ÷ -->  
     <mvc:interceptors>  
         <mvc:interceptor>  
             <mvc:mapping path="/*" />  

@@ -7,7 +7,7 @@ public class Person {
     private String ID;
     private String Name;
     private String Phone;
-    //閫氳繃List鏉ュ疄鐜颁竴瀵瑰
+    //通过List来实现一对多
     private List<Card> cardList;
     
 	public String getID() {

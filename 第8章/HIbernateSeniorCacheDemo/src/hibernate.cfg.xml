@@ -5,7 +5,7 @@
                 com.mysql.jdbc.Driver    
             </property> 
             
-            <!--  æ•°æ®åº“è¿žæŽ¥è®¾ç½® -->
+            <!--  Êý¾Ý¿âÁ¬½ÓÉèÖÃ -->
             <property name="hibernate.connection.url"> 
                 jdbc:mysql://localhost:3306/hibernatechart
             </property> 
@@ -14,10 +14,10 @@
             <property name="hibernate.connection.username">root</property> 
             <property name="hibernate.connection.password">123456</property> 
  
-            <!-- æ‰“å°SQLè¯­å¥--> 
+            <!-- ´òÓ¡SQLÓï¾ä--> 
             <property name="hibernate.show_sql">true</property> 
            
-            <!-- SQL dialect æ–¹è¨€ --> 
+            <!-- SQL dialect ·½ÑÔ --> 
             <property name="hibernate.dialect"> 
                 org.hibernate.dialect.MySQLDialect  
             </property> 
@@ -26,11 +26,11 @@
                 Validate
             </property>
 
-          <!--1.é…ç½®äºŒçº§ç¼“å­˜æä¾›ç¨‹åº-->
+          <!--1.ÅäÖÃ¶þ¼¶»º´æÌá¹©³ÌÐò-->
         <property name="hibernate.cache.use_second_level_cache">true</property>  
         <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>  
         <property name="hibernate.cache.use_query_cache">true</property>    
-            <!-- æ·»åŠ å®žä½“ç±»çš„æ˜ å°„æ–‡ä»¶--> 
+            <!-- Ìí¼ÓÊµÌåÀàµÄÓ³ÉäÎÄ¼þ--> 
             <mapping resource="Model/Account.hbm.xml" /> 
 
     </session-factory>

@@ -33,7 +33,7 @@ public class HibernateMain {
         
         Session session = sessionFactory.openSession();
         
-        //閫氳繃Criteria娣诲姞鏉′欢
+        //通过Criteria添加条件
         Criteria crit = session.createCriteria(Account.class);
         crit.add(Restrictions.ge("ID", new Integer(5)));
         crit.add(Restrictions.and( Restrictions.ge("balance", new Float(300f)) ));
@@ -47,7 +47,7 @@ public class HibernateMain {
         	System.out.println(one.getID() + "\t" + one.getName() + "\t" + one.getBank()  + "\t" + one.getBalance());
         }
         
-         //閫氳繃group by鍒嗙粍
+         //通过group by分组
         List results = session.createCriteria(Account.class)
         		.setProjection( Projections.rowCount() )
         		.list();

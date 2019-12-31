@@ -1,7 +1,7 @@
 package service;
 
 public class CheckUser {
-   //鍒ゆ柇鐢ㄦ埛鏄惁瀛樺湪
+   //判断用户是否存在
 	     public static boolean isUser(String username, String password)
 	     {
 	         String name = username.trim();

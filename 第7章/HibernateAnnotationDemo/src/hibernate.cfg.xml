@@ -5,7 +5,7 @@
                 com.mysql.jdbc.Driver    
             </property> 
             
-            <!--  æ•°æ®åº“è¿žæŽ¥è®¾ç½® -->
+            <!--  Êý¾Ý¿âÁ¬½ÓÉèÖÃ -->
             <property name="hibernate.connection.url"> 
                 jdbc:mysql://localhost:3306/hibernatechart
             </property> 
@@ -13,10 +13,10 @@
             <property name="hibernate.connection.username">root</property> 
             <property name="hibernate.connection.password">123456</property> 
  
-            <!-- æ‰“å°SQLè¯­å¥--> 
+            <!-- ´òÓ¡SQLÓï¾ä--> 
             <property name="hibernate.show_sql">true</property> 
            
-            <!-- SQL dialect æ–¹è¨€ --> 
+            <!-- SQL dialect ·½ÑÔ --> 
             <property name="hibernate.dialect"> 
                 org.hibernate.dialect.MySQLDialect  
             </property> 

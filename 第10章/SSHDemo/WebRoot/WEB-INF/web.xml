@@ -17,7 +17,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-	<!--è‹¥æ²¡æœ‰æŒ‡å®šå…¶ä»–å‚æ•°ï¼Œé»˜è®¤æŸ¥æ‰¾çš„é…ç½®æ–‡ä»¶ä½ç½®æ˜¯ï¼š/WEB-INF/applicationContext.xmlã€‚-->
+	<!--ÈôÃ»ÓÐÖ¸¶¨ÆäËû²ÎÊý£¬Ä¬ÈÏ²éÕÒµÄÅäÖÃÎÄ¼þÎ»ÖÃÊÇ£º/WEB-INF/applicationContext.xml¡£-->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
