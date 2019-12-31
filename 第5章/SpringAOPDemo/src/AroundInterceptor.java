@@ -6,9 +6,9 @@ public class AroundInterceptor implements MethodInterceptor
 {
      public Object invoke(MethodInvocation invocation) throws Throwable
  {
-         System.out.println("调用方法之前: invocation对象：[" + invocation + "]");
+         System.out.println("璋冪敤鏂规硶涔嬪墠: invocation瀵硅薄锛歔" + invocation + "]");
          Object rval = invocation.proceed();
-         System.out.println("调用结束...");
+         System.out.println("璋冪敤缁撴潫...");
          return rval;
     }
 }

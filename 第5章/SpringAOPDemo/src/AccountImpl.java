@@ -12,10 +12,10 @@ public class AccountImpl implements Account {
 
 	public void add(int money) {
 		
-		System.out.println("¸ø" +name+ "ÕË»§¼ÓÇ® " + money + "Ôª");
+		System.out.println("ç»™" +name+ "è´¦æˆ·åŠ é’± " + money + "å…ƒ");
 	}
 
 	public void minus(int money) {
-		System.out.println("´Ó"+name+"ÕË»§¿ÛÇ®: " + money + "Ôª");
+		System.out.println("ä»Ž"+name+"è´¦æˆ·æ‰£é’±: " + money + "å…ƒ");
 	}
 }

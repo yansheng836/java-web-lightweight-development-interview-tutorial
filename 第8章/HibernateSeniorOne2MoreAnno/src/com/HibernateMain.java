@@ -22,7 +22,7 @@ public class HibernateMain {
         SessionFactory sessionFactory = null;
         try{
             registry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-            //不指定文件名默认是找hibernate.cfg.xml文件
+            //涓嶆寚瀹氭枃浠跺悕榛樿鏄壘hibernate.cfg.xml鏂囦欢
             //registry = new StandardServiceRegistryBuilder().configure().build(); 
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         }catch(Exception ex){
@@ -62,11 +62,11 @@ public class HibernateMain {
     	Person onePerson = (Person)session.load(Person.class, "Person123");
         Set<Card> cardSet = onePerson.getCards() ;
     	
-        //省略System.out.println打印语句
+        //鐪佺暐System.out.println鎵撳嵃璇彞
 
         Card oneCard = (Card)session.load(Card.class, "Card123");
         Person cardOwner = oneCard.getPerson();
-        //省略System.out.println打印语句
+        //鐪佺暐System.out.println鎵撳嵃璇彞
         
 //    	session.delete(onePerson);
 //    	session.flush();
