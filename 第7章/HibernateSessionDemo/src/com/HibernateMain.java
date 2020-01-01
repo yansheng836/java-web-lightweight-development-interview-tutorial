@@ -29,12 +29,12 @@ public class HibernateMain {
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
                 
-        //1 µÃµ½Account±íÀïËùÓĞ¼ÇÂ¼        
+        //1 å¾—åˆ°Accountè¡¨é‡Œæ‰€æœ‰è®°å½•        
         List<Account> accountList = new ArrayList<Account>();
 		String hqlstr = "from Account";
 		Query query = session.createQuery(hqlstr);
 		accountList = query.list(); 
-        //ÓÃload·½Ê½ 
+        //ç”¨loadæ–¹å¼ 
 		System.out.println("load...");
 //		Account loadNotExistAcc = (Account)session.load(Account.class, 100);
 //		if(loadNotExistAcc == null)
@@ -50,7 +50,7 @@ public class HibernateMain {
         	Account one = (Account)session.load(Account.class, accountList.get(i).getID());
         	System.out.println(one.getName() + "\t" + one.getBank() + "\t" + one.getBalance());
         }
-        //ÓÃget·½Ê½ 
+        //ç”¨getæ–¹å¼ 
 		System.out.println("get...");
 		Account getNotExistAcc = (Account)session.get(Account.class, 100);
 		if(getNotExistAcc == null)
@@ -88,10 +88,10 @@ public class HibernateMain {
         session.save(accForORM);
         tx.commit();
         
-        //3 ÔÙ¿ªÆôÁíÍâÒ»¸öÊÂÎñ¸üĞÂÊı¾İ
+        //3 å†å¼€å¯å¦å¤–ä¸€ä¸ªäº‹åŠ¡æ›´æ–°æ•°æ®
         tx = session.beginTransaction();
         accountList = query.list(); 
-        //ÓÃload·½Ê½ÄÃµ½Êı¾İ£¬²¢¸øÃ¿¸öÕË»§¼Ó200Ôª		
+        //ç”¨loadæ–¹å¼æ‹¿åˆ°æ•°æ®ï¼Œå¹¶ç»™æ¯ä¸ªè´¦æˆ·åŠ 200å…ƒ		
         for(int i = 0;i<accountList.size();i++)
         {
         	Account one = (Account)session.load(Account.class, accountList.get(i).getID());

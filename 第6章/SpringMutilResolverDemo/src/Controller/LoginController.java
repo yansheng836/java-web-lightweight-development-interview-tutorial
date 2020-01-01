@@ -13,7 +13,7 @@ public class LoginController extends AbstractController{
 	        
 	        String userName=request.getParameter("username");
 
-	        //Ê¡ÂÔÉí·İÑéÖ¤µÄ¶¯×÷
+	        //çœç•¥èº«ä»½éªŒè¯çš„åŠ¨ä½œ
 	        
 	        ModelAndView mav=new ModelAndView("welcome");
 	        mav.addObject("userName",userName);

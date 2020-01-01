@@ -7,17 +7,17 @@
 	<form name="form1" action="./servlet/Validator" method="POST">
 		<table>
 			<tr>
-				<td>ÓÃ»§Ãû£º</td>
+				<td>ç”¨æˆ·åï¼š</td>
 				<td><input type="text" name="username" id="username" /></td>
 			</tr>
 			<tr>
-				<td>ÃÜ&nbsp;&nbsp;Âë£º</td>
+				<td>å¯†&nbsp;&nbsp;ç ï¼š</td>
 				<td><input type="password" name="password" id="password" /></td>
 			</tr>
 			<tr>
 				<td colospan="2" align="center">
-	<input type="submit" name="logon" value="µÇÂ¼" />&nbsp;&nbsp;
-				<input type="reset" name="reset" value="ÖØÖÃ" />
+	<input type="submit" name="logon" value="ç™»å½•" />&nbsp;&nbsp;
+				<input type="reset" name="reset" value="é‡ç½®" />
 				</td>
 			</tr>
 		</table>

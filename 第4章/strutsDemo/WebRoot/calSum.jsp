@@ -3,16 +3,16 @@
   
   <html>
       <head>
-          <title>ÊäÈë²Ù×÷Êý</title>
+          <title>è¾“å…¥æ“ä½œæ•°</title>
       </head>
   
       <body>
-           ÇóºÍ
+           æ±‚å’Œ
           <br/>
           <s:form action="mystruts/calSum" >                
-              <s:textfield name="num1" label="Êý1"/>
-              <s:textfield name="num2"  label="Êý2" />        
-              <s:submit value="ÇóºÍ" />            
+              <s:textfield name="num1" label="æ•°1"/>
+              <s:textfield name="num2"  label="æ•°2" />        
+              <s:submit value="æ±‚å’Œ" />            
           </s:form>
       </body>
   </html>

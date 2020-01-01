@@ -9,9 +9,9 @@ public class Main
   ApplicationContext ctx = new FileSystemXmlApplicationContext("src/ApplicationContext.xml");
   Account account = (Account)ctx.getBean("account");
 
-  System.out.println("第一个add方法");
+  System.out.println("绗竴涓猘dd鏂规硶");
   account.add(100);
-  System.out.println("第二个minus方法");  
+  System.out.println("绗簩涓猰inus鏂规硶");  
   account.minus(100);
     }
 }

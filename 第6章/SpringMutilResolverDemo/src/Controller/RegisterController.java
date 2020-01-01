@@ -13,7 +13,7 @@ public class RegisterController extends AbstractController{
 	        
 	        String userName=request.getParameter("username");
 
-	        //Ê¡ÂÔ×¢²áµÄ¶¯×÷
+	        //çœç•¥æ³¨å†Œçš„åŠ¨ä½œ
 	        
 	        ModelAndView model=new ModelAndView("welcome");
 	        model.addObject("userName",userName);

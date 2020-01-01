@@ -4,16 +4,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>аТятпео╒ап╠М</title>
+    <title>Г∙≥Х╗─Д©║Ф│╞Е┬≈Х║╗</title>
   </head>
   
   <body>
-  	<h2>кЫспаТятпео╒хГобё╨</h2><br />
+  	<h2>Ф┴─Ф°┴Г∙≥Х╗─Д©║Ф│╞Е╕┌Д╦▀О╪ </h2><br />
   	<table border="1" width="700">
   		<tr>
-  			<th width="500">аТят╠ЙлБ</th>
-  			<th width="100">вВуъпуцШ</th>
-  			<th width="100">╥╒╡╪й╠╪Д</th>
+  			<th width="500">Г∙≥Х╗─Ф═┤И╒≤</th>
+  			<th width="100">Д╫°Х─┘Е╖⌠Е░█</th>
+  			<th width="100">Е▐▒Е╦┐Ф≈╤И≈╢</th>
   		</tr>
   		<%
   		NoteBean noteBean = new NoteBean();

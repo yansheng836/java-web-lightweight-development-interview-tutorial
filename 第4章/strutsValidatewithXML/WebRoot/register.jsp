@@ -4,12 +4,12 @@
       <body>
           <s:fielderror/>
           <form action="registerAction" validate="true" method="post">                
-                                 ��¼�û���<input type="text" name="username"><br>
-                                 ��¼���룺<input type="text" name="password"><br>
-                                 ȷ�����룺<input type="text" name="confirm"><br>
-                                 �ʼ���ַ��<input type="text" name="email"><br>
-		            �ֻ����룺<input type="text" name="handphone"><br>
-		    <input type="submit" value="�ύ">
+                                 登录用户：<input type="text" name="username"><br>
+                                 登录密码：<input type="text" name="password"><br>
+                                 确认密码：<input type="text" name="confirm"><br>
+                                 邮件地址：<input type="text" name="email"><br>
+		            手机号码：<input type="text" name="handphone"><br>
+		    <input type="submit" value="提交">
           </form>
       </body>
   </html>

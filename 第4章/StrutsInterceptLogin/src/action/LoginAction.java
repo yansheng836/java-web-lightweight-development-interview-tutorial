@@ -12,10 +12,10 @@ public class LoginAction extends ActionSupport {
      private String password;
  
      public String execute() throws Exception {
-         // 设置session
+         // 璁剧疆session
          Map sessionMap = ActionContext.getContext().getSession();
          sessionMap.put("username", username);
-         // 验证用户
+         // 楠岃瘉鐢ㄦ埛
          if (    CheckUser.isUser(username, password) ) {             
              return SUCCESS;
          }

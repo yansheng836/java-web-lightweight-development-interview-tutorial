@@ -12,12 +12,12 @@ public class myAction extends ActionSupport
     
     public String execute() throws Exception
     {
-    	// Èç¹ûºÍÊÇ´óÓÚµÈÓÚ0£¬Ìøµ½positive.jspÒ³Ãæ
+    	// å¦‚æœå’Œæ˜¯å¤§äºç­‰äº0ï¼Œè·³åˆ°positive.jspé¡µé¢
     	if (getSum() >= 0)  
         {
             return "Positive";
         }
-    	// Èç¹û·ñÔòÌøµ½negative.jspÒ³Ãæ
+    	// å¦‚æœå¦åˆ™è·³åˆ°negative.jspé¡µé¢
         else  
         {
             return "Negative";
@@ -43,7 +43,7 @@ public class myAction extends ActionSupport
 
 	public int getSum()
     {
-        return n1 + n2;  // ¼ÆËãÁ½¸öÕûÊıµÄ´úÂëÊıºÍ
+        return n1 + n2;  // è®¡ç®—ä¸¤ä¸ªæ•´æ•°çš„ä»£ç æ•°å’Œ
     }
 	
 	

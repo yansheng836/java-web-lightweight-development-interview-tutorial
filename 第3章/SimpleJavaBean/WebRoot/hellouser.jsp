@@ -14,11 +14,11 @@
 		<title>Hello,User</title>
 	</head>
 	<body>
-		<h1>Hello,my name is 张三.What's your name?</h1>
+		<h1>Hello,my name is 寮犱笁.What's your name?</h1>
 		<form method = "get" action = "responseuser.jsp">
 			<input type = "text" name = "username" size = "25"><br>
-			<input type = "submit" value = "提交">
-			<input type = "reset" value = "重置">
+			<input type = "submit" value = "鎻愪氦">
+			<input type = "reset" value = "閲嶇疆">
 		</form>
 	</body>
 </html>

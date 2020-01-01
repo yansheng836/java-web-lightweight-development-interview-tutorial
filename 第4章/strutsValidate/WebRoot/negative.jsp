@@ -3,11 +3,11 @@
   
   <html>
     <head>
-      <title>ÏÔÊ¾ºÍ</title>
+      <title>æ˜¾ç¤ºå’Œ</title>
     </head>
     
     <body>
-      ½á¹ûÐ¡ÓÚ0£¬<h1><s:property value="sum" /></h1>
+      ç»“æžœå°äºŽ0ï¼Œ<h1><s:property value="sum" /></h1>
       
     </body>
   </html> 

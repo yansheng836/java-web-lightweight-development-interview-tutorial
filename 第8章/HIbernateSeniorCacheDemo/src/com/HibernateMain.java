@@ -38,13 +38,13 @@ public class HibernateMain {
         Session session = sessionFactory.openSession();
         
         Transaction tr1 = session.beginTransaction();  
-        //¼ÓÔØIDÎª1µÄ¶ÔÏó  
+        //åŠ è½½IDä¸º1çš„å¯¹è±¡  
         Account acc1 = (Account) session.get(Account.class, 1);  
         System.out.println("In First Session, name is "+ acc1.getName());  
         tr1.commit();  
         session.close();  
           
-        //¼ÓÔØIDÍ¬ÑùÊÇ1µÄ¶ÔÏó  
+        //åŠ è½½IDåŒæ ·æ˜¯1çš„å¯¹è±¡  
         Session session2 = sessionFactory.openSession();  
         Transaction tr2 = session2.beginTransaction();  
         Account acc2 = (Account) session2.get(Account.class, 1);    

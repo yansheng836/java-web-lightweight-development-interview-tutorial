@@ -2,43 +2,43 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
  "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
- <!--  ÅäÖÃÄ¿±ê¶ÔÏó-->
+ <!--  é…ç½®ç›®æ ‡å¯¹è±¡-->
  <bean id="accountTarget" class="AccountImpl">
-  <!--  ÎªÄ¿±ê¶ÔÏó×¢ÈënameÊôÐÔÖµ-->
+  <!--  ä¸ºç›®æ ‡å¯¹è±¡æ³¨å…¥nameå±žæ€§å€¼-->
   <property name="name">
    <value>Java</value>
   </property>  
  </bean>
- <!--  µÚÒ»¸öÀ¹½ØÆ÷-->
+ <!--  ç¬¬ä¸€ä¸ªæ‹¦æˆªå™¨-->
  <bean id="myAdvice" class="BeforeAdvice"/>
- <!--  µÚ¶þ¸öÀ¹½ØÆ÷-->
+ <!--  ç¬¬äºŒä¸ªæ‹¦æˆªå™¨-->
  <bean id="myAroundInterceptor" class="AroundInterceptor"/>
-<!--  ½«À¹½ØÆ÷°ü×°³ÉAdvisor£¬¸Ã¶ÔÏó»¹È·¶¨´úÀí¶ÔÔõÑùµÄ·½·¨Ôö¼Ó´¦Àí-->
+<!--  å°†æ‹¦æˆªå™¨åŒ…è£…æˆAdvisorï¼Œè¯¥å¯¹è±¡è¿˜ç¡®å®šä»£ç†å¯¹æ€Žæ ·çš„æ–¹æ³•å¢žåŠ å¤„ç†-->
  <bean id="addAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
-  <!--  adviceÊôÐÔÈ·¶¨´¦Àíbean-->
+  <!--  adviceå±žæ€§ç¡®å®šå¤„ç†bean-->
   <property name="advice">
-   <!-- ´Ë´¦µÄ´¦Àíbean¶¨Òå²ÉÓÃÇ¶Ì×bean,Ò²¿ÉÒýÓÃÈÝÆ÷µÄÁíÒ»¸öbean-->
+   <!-- æ­¤å¤„çš„å¤„ç†beanå®šä¹‰é‡‡ç”¨åµŒå¥—bean,ä¹Ÿå¯å¼•ç”¨å®¹å™¨çš„å¦ä¸€ä¸ªbean-->
    <bean class="AfterAdvice"/>
   </property>
-  <!-- È·¶¨ÕýÔò±í´ïÊ½Ä£Ê½-->
+  <!-- ç¡®å®šæ­£åˆ™è¡¨è¾¾å¼æ¨¡å¼-->
   <property name="patterns">
    <list>
-    <!--  È·¶¨ÕýÔò±í´ïÊ½ÁÐ±í-->
+    <!--  ç¡®å®šæ­£åˆ™è¡¨è¾¾å¼åˆ—è¡¨-->
     <value>.*add*.</value>
    </list>
   </property>
  </bean>
- <!--  Ê¹ÓÃProxyFactoryBean ²úÉú´úÀí¶ÔÏó-->
+ <!--  ä½¿ç”¨ProxyFactoryBean äº§ç”Ÿä»£ç†å¯¹è±¡-->
  <bean id="account" class="org.springframework.aop.framework.ProxyFactoryBean">
-  <!--  ´úÀí¶ÔÏóËùÊµÏÖµÄ½Ó¿Ú-->
+  <!--  ä»£ç†å¯¹è±¡æ‰€å®žçŽ°çš„æŽ¥å£-->
   <property name="proxyInterfaces">
    <value>Account</value>
   </property>
-  <!--  ÉèÖÃÄ¿±ê¶ÔÏó-->
+  <!--  è®¾ç½®ç›®æ ‡å¯¹è±¡-->
   <property name="target">
    <ref local="accountTarget"/>  
   </property>
-  <!--  ´úÀí¶ÔÏóËùÊ¹ÓÃµÄÀ¹½ØÆ÷-->
+  <!--  ä»£ç†å¯¹è±¡æ‰€ä½¿ç”¨çš„æ‹¦æˆªå™¨-->
   <property name="interceptorNames">
    <list>
     <value>addAdvisor</value>

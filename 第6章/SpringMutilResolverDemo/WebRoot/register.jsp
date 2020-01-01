@@ -2,9 +2,9 @@
   <html>
       <body>       
           <form action="registerAction"  method="post">                
-                                 ע���û���<input type="text" name="username"><br>
-                                 ע�����룺<input type="password" name="password"><br>                                 
-		    <input type="submit" value="���ע��">
+                                 注册用户：<input type="text" name="username"><br>
+                                 注册密码：<input type="password" name="password"><br>                                 
+		    <input type="submit" value="完成注册">
           </form>
       </body>
   </html>
